@@ -8,18 +8,23 @@ body {
 }
 
 .hero {
-    width: 960px;
+    width: 1200px;
     margin: 0 auto;
     background-color: #202020;
     display: flex;
     flex-wrap: wrap;
-    padding: 5%;
 }
 
 .hero-imageContainer {
     width: 50%;
+    margin: 0;
+}
+
+.hero-image {
+    width: 100%;
 }
 
 .hero-infoContainer {
-    width: 50%;
+    width: 40%;
+    padding: 5%;
 }
