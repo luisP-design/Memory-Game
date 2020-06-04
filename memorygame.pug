@@ -1,0 +1,30 @@
+mixin Carta
+        .GameBody__Card
+            .GameBody__Card--Front
+                p.GameBody__CardIcon *
+            .GameBody__Card--Back
+
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Memory Game
+        link(rel="stylesheet", href='/Library/MemoryGameStyle.css')
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap")
+    body
+        header.GameHeader
+            span.GameUser#GameUser
+                p Usuario: 
+                    span#UserName.UserName
+            span.GameLifes#GameLost
+            span.GameLifes#Gamelifes Vidas: 
+                span.GameLifes__lifes#GameLifes__lifes ♥♥♥♥♥♥♥♥
+        main.GameBody
+            .GameBody__Container#GameBody__Container
+                a.GameBody__button(onClick="juego.iniciaJuego()") Iniciar
+                //- +Carta
+                //- +Carta
+                //- +Carta
+        footer.GameFooter
+        script(src='/Library/MemoryGameScript.js')

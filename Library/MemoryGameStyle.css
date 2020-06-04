@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #404040;
+    font-family: 'Chelsea Market', cursive;
+    color: #f0f0f0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+}
+
+.GameHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.UserName, .GameLevel__level, .GameLifes__lifes {
+    color: #00f7ff;
+}
+
+.GameBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.GameBody__Container {
+    /* border: 1px #fff solid; */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-content: center;
+}
+
+.GameBody__button {
+    font-size: 4em;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    border: 2px #fff solid;
+    padding: 0.5em 1em;
+    border-radius: 30px;
+    transition: .6s;
+}
+
+.GameBody__button:hover {
+    background-color: #505050;
+    border-color: #00f7ff;
+    color: #00f7ff;
+    cursor: pointer;
+}
+
+.GameBody__Card {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.GameBody__Card--Front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 3px 3px 8px #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    transition: .5s;
+    color: rgba(0,0,0,0);
+    z-index: 50;
+    text-decoration: none;
+}
+
+.GameBody__Card--Front:hover {
+    background-color: none;
+    color: #404040;
+}
+
+.GameBody__Card--Back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 3px 3px 8px #303030;
+    /* background-color: #00f7ff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    transition: .5s;
+    z-index: 40;
+}
+
+.GameBody__CardIcon {
+    font-size: 5em;
+    line-height: 0;
+    animation: showIn 1s ease-out;
+}
+
+.colorGray {
+    background-color: #4a4a4a;
+    color: #404040;
+}
+
+.expuesta {
+    background-color: none !important;
+    color: rgba(0,0,0,0) !important;
+}
+
+.GameBody__Win {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes showIn {
+    0% {
+        opacity: 0;
+        font-size: 1em;
+        
+    }
+    100% {
+        opacity: 1;
+        font-size: 5em;
+    }
+}

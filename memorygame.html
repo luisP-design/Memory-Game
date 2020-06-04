@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="/Library/MemoryGameStyle.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chelsea+Market&amp;display=swap"/>
+  </head>
+  <body>
+    <header class="GameHeader"><span class="GameUser" id="GameUser">
+        <p>Usuario: <span class="UserName" id="UserName"></span></p></span><span class="GameLifes" id="GameLost"></span><span class="GameLifes" id="Gamelifes">Vidas: <span class="GameLifes__lifes" id="GameLifes__lifes">♥♥♥♥♥♥♥♥</span></span></header>
+    <main class="GameBody">
+      <div class="GameBody__Container" id="GameBody__Container"><a class="GameBody__button" onClick="juego.iniciaJuego()">Iniciar</a></div>
+    </main>
+    <footer class="GameFooter"></footer>
+    <script src="/Library/MemoryGameScript.js"></script>
+  </body>
+</html>
